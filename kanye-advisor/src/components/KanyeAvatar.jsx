@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 
 function KanyeAvatar({ isActive }) {
   return (
-    <div className="kanye-avatar-container">
+    <div className="kanye-avatar-container flex flex-col items-center">
       <motion.div
-        className="kanye-avatar"
+        className="kanye-avatar relative"
         animate={{
           scale: isActive ? [1, 1.05, 1] : 1,
           rotate: isActive ? [0, 2, -2, 0] : 0
@@ -15,17 +15,17 @@ function KanyeAvatar({ isActive }) {
           ease: "easeInOut"
         }}
       >
-        <div className="avatar-circle">
-          <div className="sunglasses">
-            <div className="lens left-lens"></div>
-            <div className="lens right-lens"></div>
-            <div className="bridge"></div>
-          </div>
-        </div>
-        
+        {/* Kanye Image */}
+        <img
+          src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO3nMr04-default.jpg"
+          alt="Kanye West"
+          className="rounded-full w-32 h-32 object-cover border-4 border-gray-300 shadow-lg"
+        />
+
+        {/* Speech indicator */}
         {isActive && (
           <motion.div
-            className="speech-indicator"
+            className="absolute bottom-0 right-0 bg-white rounded-full shadow-lg p-2 text-lg"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
@@ -34,8 +34,8 @@ function KanyeAvatar({ isActive }) {
           </motion.div>
         )}
       </motion.div>
-      
-      <p className="avatar-label">Kanye West</p>
+
+      <p className="avatar-label mt-2 text-center font-semibold">Kanye West</p>
     </div>
   )
 }
