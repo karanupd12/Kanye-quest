@@ -11,7 +11,7 @@ function App() {
       {/* === HEADER === */}
       <header className="app-header">
         <h1>Ask Ye Anything</h1>
-        <p>Unfiltered bars. Raw wisdom. Straight from Ye.</p>
+        <p>Unfiltered bars. Raw wisdom. Straight from Ye. No Rap stuff</p>
       </header>
       
       {/* === MAIN LAYOUT === */}
@@ -31,7 +31,7 @@ function App() {
 
       {/* === FOOTER TAGLINE === */}
       <footer className="app-footer">
-        <p>⚡ Speak truth. Stay bold. Channel Ye. ⚡</p>
+        <p>⚡ Speak truth. Stay bold. Channel Ye.⚡</p>
       </footer>
     </div>
   )
