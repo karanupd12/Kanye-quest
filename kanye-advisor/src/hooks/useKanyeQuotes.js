@@ -7,7 +7,8 @@ const useKanyeQuotes = () => {
   const fetchKanyeQuote = useCallback(async () => {
     setIsLoading(true)
     setError(null)
-    
+
+    //response fixed
     try {
       const response = await fetch('https://api.kanye.rest')
       
